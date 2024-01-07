@@ -24,4 +24,4 @@ export const faqs = [
     content:
         "No, you don't need any prior coding experience to use AtlasDev. We offer courses suitable for beginners that provide a solid foundation in programming concepts. However, if you already have some coding experience, we also have more advanced courses to help you further develop your skills.",
     },
-  ];
+];
