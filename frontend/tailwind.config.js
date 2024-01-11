@@ -6,8 +6,8 @@ export default {
       colors: {
         primaryColor: "#9771FF",
         yellowColor: "#FEB60D",
-        purpleColor: "#0067FF",
-        irisBlueColpr: "#01B5C5",
+        blueColor: "#0067FF",
+        irisBlueColor: "#01B5C5",
         headingColor: "#181A1E",
         textColor: "#4E545F",
         },
@@ -17,5 +17,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }

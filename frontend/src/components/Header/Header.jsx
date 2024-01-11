@@ -6,7 +6,7 @@ import {BiMenu} from "react-icons/bi";
 const navLinks = [
     {
     path:'/home',
-    display:'Home'
+    display:'Home' 
     },
     {
     path:'/courses',
@@ -52,7 +52,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* ======== AtlasDev Logo ========= */}
             <div>
-              <img src={logo} alt="" width="180px" />
+              <img src={logo} alt="" width="150px" className='logo'/>
             </div>
             {/* ======== Menu ============= */}
             <div className="navigation" ref={menuef} onClick={toggleMenu}>
@@ -85,8 +85,8 @@ const Header = () => {
               </div>
               <Link to="/login">
                 <button
-                  className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px flex items-center
-                        justify-center rounded-[50px] hover:bg-irisBlueColpr">
+                  className=" bg-primaryColor py-2 px-6 text-white font-[800] h-[44px] flex items-center
+                        justify-center animate-fade animate-delay-300 rounded-[50px]  hover:bg-irisBlueColor transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300  mr-20">
                   Login
                 </button>
               </Link>
@@ -102,4 +102,3 @@ const Header = () => {
 };
 
 export default Header
-

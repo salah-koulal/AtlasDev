@@ -9,6 +9,10 @@
 body {
     font-family: 'Manrope', sans-serif;
 }
+.logo{
+    margin-left: 70%;
+}
+
 
 .sticky__header {
     width: 100%;
@@ -47,6 +51,8 @@ body {
     .show__menu{
         display: block;
     }
-
+    .logo{
+        float: right;
+    }
     
 }
