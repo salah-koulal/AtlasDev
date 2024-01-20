@@ -10,7 +10,7 @@ const navLinks = [
     },
     {
     path:'/courses',
-    display:'Find a Course'
+    display:'Popular Courses'
     },
     {
     path:'/categories',
@@ -86,7 +86,7 @@ const Header = () => {
               <Link to="/login">
                 <button
                   className=" bg-primaryColor py-2 px-6 text-white font-[800] h-[44px] flex items-center
-                        justify-center animate-fade animate-delay-300 rounded-[50px]  hover:bg-irisBlueColor transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300  mr-20">
+                        justify-center animate-fade animate-delay-300 rounded-[50px]  hover:bg-irisBlueColor transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300  mr-10">
                   Login
                 </button>
               </Link>
