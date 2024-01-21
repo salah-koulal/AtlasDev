@@ -26,7 +26,7 @@
     }
     .header{
         @apply bg-[url('./assets/images/blurHeader.svg')] bg-no-repeat bg-center bg-cover w-full h-[100px] ;
-        @apply bg-white;
+        @apply bg-white ;        
     }
     .hero__section{
         @apply bg-[url('./assets/images/blurSec.svg')] bg-no-repeat bg-center bg-cover w-full  ;

@@ -7,6 +7,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import step01 from "../assets/images/select-animate.svg";
 import step02 from "../assets/images/webinar-animate.svg";
 import step03 from "../assets/images/notes-animate.svg";
+import About from "../components/About/About";
 
 const Home = () => {
   return (
@@ -39,7 +40,7 @@ const Home = () => {
                     <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor animate-fade-down animate-delay-[400ms]">
                       25+
                     </h2>
-                    <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px] animate-fade-up animate-delay-[400ms]"></span>
+                    <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px] animate-fade-right animate-once animate-ease-in-out animate-delay-500"></span>
                     <p className="text__para">Courses Offered</p>
                   </div>
 
@@ -48,17 +49,17 @@ const Home = () => {
                     <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor animate-fade-down animate-delay-[400ms]">
                       10+
                     </h2>
-                    <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px] animate-fade-up animate-delay-[400ms]"></span>
+                    <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px] animate-fade-right animate-once animate-ease-in-out animate-delay-500"></span>
                     <p className="text__para">Coding Categories</p>
                   </div>
 
                   {/* Counter 3 */}
                   <div>
                     <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor animate-fade-down animate-delay-[400ms]">
-                      30+
+                      20+
                     </h2>
-                    <span className="w-[100px] h-2 bg-blueColor rounded-full block mt-[-14px] animate-fade-up animate-delay-[400ms]"></span>
-                    <p className="text__para">Interactive Challenges</p>
+                    <span className="w-[100px] h-2 bg-blueColor rounded-full block mt-[-14px] animate-fade-right animate-once animate-ease-in-out animate-delay-500"></span>
+                    <p className="text__para">Blogs</p>
                   </div>
                 </div>
               </div>
@@ -76,6 +77,8 @@ const Home = () => {
       </section>
       {/* End of Hero Section */}
 
+
+      {/* ================ How It works Section ================ */}
       <section>
         <div className="container">
           <div className="lg:w-[470px] mx-auto">
@@ -159,10 +162,16 @@ const Home = () => {
               </div>
             </div>
 
-
           </div>
         </div>
       </section>
+      {/* ============= End How It works Section =================*/}
+
+      {/* About Section */}
+
+      <About/>
+      {/* End About Section */}
+
     </>
   );
 };
