@@ -1,11 +1,11 @@
 import React from 'react'
 import Home from '../pages/Home'
-import Categories from '../pages/categories'
+import Categories from '../pages/Categories'
 import Courses from '../pages/Courses/Courses'
 import CoursesDetails from '../pages/Courses/CoursesDetails'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
-import Contact from '../pages/contact'
+import Contact from '../pages/Contact'
 
 
 import {Routes, Route} from 'react-router-dom'
