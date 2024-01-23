@@ -27,7 +27,7 @@ const About = () => {
 
           {/* =========== About Content ========= */}
           <div className="w-full lg:w-1/2 xl:w-[670px] order-1 lg:order-2">
-            <h2 className="heading">Exited to start learning with us</h2>
+            <h2 className="heading">Excited to start learning with us</h2>
             <p className="text__para">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora consequuntur,
                  laborum tenetur laudantium, maiores eius at rem nesciunt quaerat nisi, 

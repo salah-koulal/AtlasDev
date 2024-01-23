@@ -1,13 +1,14 @@
 import React from "react";
 import Lottie from "lottie-react";
-import animationData from "../assets/images/Herosc.json"
+import animationData from "../assets/images/Herosc.json";
 // import heroimg from "../assets/images/heroSec.gif";
 import { NavLink, Link } from "react-router-dom";
-import { BsArrowRight } from 'react-icons/bs'
+import { BsArrowRight } from "react-icons/bs";
 import step01 from "../assets/images/select-animate.svg";
 import step02 from "../assets/images/webinar-animate.svg";
 import step03 from "../assets/images/notes-animate.svg";
 import About from "../components/About/About";
+import CategoriesList from "../components/Categories/CategoriesList";
 
 const Home = () => {
   return (
@@ -69,14 +70,13 @@ const Home = () => {
             <div className="flex gap-[30px] justify-end ">
               <div>
                 {/* <img className="w-[650px]" src={heroimg} alt="Animate" /> */}
-                <Lottie animationData={animationData}/>
+                <Lottie animationData={animationData} />
               </div>
             </div>
           </div>
         </div>
       </section>
       {/* End of Hero Section */}
-
 
       {/* ================ How It works Section ================ */}
       <section>
@@ -92,7 +92,6 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
-
             {/* Make Step 1 */}
             <div className="py-[30px] px-5 ">
               <div className="flex items-center justify-center">
@@ -103,19 +102,22 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Choose your Category
                 </h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">Find what you love! Pick a category and explore courses that match your interests.
-                 It's easy to start your learning adventure with us.
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  Find what you love! Pick a category and explore courses that
+                  match your interests. It's easy to start your learning
+                  adventure with us.
                 </p>
                 <br />
 
-                <Link to='/categories' className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
-                mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+                <Link
+                  to="/categories"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
+								mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+                >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
             </div>
-            
-
 
             {/* Make step 2 */}
             <div className="py-[30px] px-5 ">
@@ -127,19 +129,21 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Watch Courses
                 </h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">Dive into learning with our easy-to-watch courses. Enhance your skills effortlessly, one video at a time.
-                 Start watching and empower your knowledge journey today!
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  Dive into learning with our easy-to-watch courses. Enhance
+                  your skills effortlessly, one video at a time. Start watching
+                  and empower your knowledge journey today!
                 </p>
 
-                <Link to='/categories' className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
-                mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+                <Link
+                  to="/categories"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
+								mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+                >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
             </div>
-            
-
-
 
             {/* Make step 3 */}
             <div className="py-[30px] px-5 ">
@@ -151,17 +155,22 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
                   Take your Notes
                 </h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">Maximize your learning by taking notes. Jot down key points, ideas, and insights as you go through our courses. It's a simple yet effective way to reinforce your understanding.
-                 Ready to get started?
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  Maximize your learning by taking notes. Jot down key points,
+                  ideas, and insights as you go through our courses. It's a
+                  simple yet effective way to reinforce your understanding.
+                  Ready to get started?
                 </p>
 
-                <Link to='/categories' className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
-                mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
+                <Link
+                  to="/categories"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
+								mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+                >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -169,9 +178,24 @@ const Home = () => {
 
       {/* About Section */}
 
-      <About/>
+      <About />
       {/* End About Section */}
 
+      {/* ================== Category Section ========================= */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our Categories</h2>
+            <p className="text__para text-center">
+              Discover coding at AtlasDev. Start your journey with web and App
+              development... Join Us!
+            </p>
+          </div>
+
+         <CategoriesList />
+        </div>
+      </section>
+      {/* ================== Category Section End ========================= */}
     </>
   );
 };
