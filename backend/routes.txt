@@ -1,0 +1,24 @@
+SignUp: '/signup', POST ==> to send the new user’s details to the server.
+SignIn: '/signin', POST ==> to send the user’s credentials (like username and password) to the server
+LogOut: '/logout', GET ==> to retrieve data, but it can be used here to change the state of the user (from logged in to logged out).
+User Profile: '/profile/<string:username>', GET ==> to retrieve the profile of a user
+Update User Profile: '/profile/<string:username>', PUT ==> to update the profile of a user.
+
+Categories: '/categories', GET ==> Retreive all categories
+Category: '/categories/<string:id>', GET ==> Retreive Courses within the specific category 
+
+Courses: '/courses', GET ==> Retrieve all courses (ex: limited in 6 orderby date)
+Course: '/courses/<string:id>', GET ==> retrieve course by given id
+
+Favorites: '/favorites/', GET ==> retrieve all favorites for a user
+Add to Favorites: '/favorites/<string:course_id>', POST ==> to add a course to a user’s favorites.
+Remove from Favorites: '/favorites/<string:course_id>', DELETE ==> to remove a course from a user’s favorites.
+
+Notes: '/notes', GET ==> retrieve notes for a course
+Add Note: '/notes/<string:course_id>', POST ==> to add a note to a specific course.
+Update Note: '/notes/<string:note_id>', PUT ==> to update a specific note.
+Delete Note: '/notes/<string:note_id>', DELETE ==> to delete a specific note.
+
+Search: '/search', Get ==> Retrieves search results based on the query.
+
+Contact: '/contact', POST ==> Send mail

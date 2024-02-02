@@ -1,0 +1,7 @@
+__pycache__
+atlas_cols.py
+connection.py
+create_note_col.py
+insert_doc.py
+object_creation.py
+update_doc.py
