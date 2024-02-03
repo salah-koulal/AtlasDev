@@ -11,7 +11,7 @@ const About = () => {
           
           <div className="relative q-3/4 lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1">
               <img
-                className="absolute rounded-2xl  float-left ml-[10%] animate-fade-left animate-delay-[400ms] shadow-lg shadow-indigo-500/80"
+                className="absolute rounded-2xl float-left ml-[10%] animate-fade-left  animate-delay-[400ms] shadow-lg shadow-indigo-500/80"
                 src={AboutCard}
                 alt=""
                 width="200px"
@@ -40,7 +40,7 @@ const About = () => {
                 vero sint mollitia quisquam iste amet provident debitis numquam cupiditate.
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, modi!
             </p>
-            <Link to='/'><button className="btn">Learn More</button></Link>
+            <Link to='/'><button className="btn ">Learn More</button></Link>
           </div>
         </div>
       </div>

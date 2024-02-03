@@ -2,20 +2,20 @@ export const categories = [
   {
     name: "Web Development",
     desc: "Design and build dynamic websites and web applications.",
-    bgColor: "rgba(254, 182, 13, .2)",
-    textColor: "#FEB60D",
+    bgColor: "rgba(0, 123, 255, .2)",
+    textColor: "#007BFF",
   },
   {
     name: "Game Development",
     desc: "Create interactive and immersive gaming experiences with game development technologies.",
-    bgColor: "rgba(108, 117, 125, .2)",
-    textColor: "#6C757D",
+    bgColor: "rgba(151, 113, 255, .2)",
+    textColor: "#9771FF7D",
   },
   {
     name: "Mobile App Development",
     desc: "Craft mobile applications for iOS, Android, and cross-platform solutions.",
-    bgColor: "rgba(151, 113, 255, .2)",
-    textColor: "#9771FF",
+    bgColor: "rgba(254, 182, 13, .2)",
+    textColor: "#FEB60D",
   },
   {
     name: "UI/UX Design",

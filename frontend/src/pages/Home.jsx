@@ -24,9 +24,10 @@ const Home = () => {
                   Coding Mastery, Simplified with AtlasDev.
                 </h1>
                 <p className="text__para animate-fade-right animate-delay-[400ms]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                  harum assumenda laboriosam cupiditate! Adipisci itaque aperiam
-                  sapiente impedit soluta vel doloremque ab corporis
+                Unlock the full potential of your coding journey with AtlasDev's meticulously crafted courses.
+                 Embark on a transformative experience of exploration, discovery, and skill-building as you delve into the world of programming excellence.
+                 Join us in shaping your coding expertise with precision and mastery.
+
                 </p>
 
                 <Link to="/categories">

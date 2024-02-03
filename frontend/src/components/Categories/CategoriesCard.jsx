@@ -2,24 +2,32 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import webDevelopmentImage from "../../assets/images/WebCategory.png";
-import mobileAppDevelopmentImage from "../../assets/images/GameCategory.png";
-
+import GameDevelopmentImage from "../../assets/images/GameCategory.png";
+import mobileAppDevelopmentImage from "../../assets/images/AppCategory.png";
+import BackendDevelopmentImage from "../../assets/images/BackendCategory.png";
+import FrontendDevelopmentImage from "../../assets/images/FrontendCategory.png";
+import uiuxdesign from "../../assets/images/uiuxCategory.png";
 
 const categoryImages = {
-	"Web Development": webDevelopmentImage,
-	"Game Development": mobileAppDevelopmentImage,
-	// ... i will map other images to category names
-  };
+  "Web Development": webDevelopmentImage,
+  "Game Development": GameDevelopmentImage,
+  "Mobile App Development": mobileAppDevelopmentImage,
+  "UI/UX Design": uiuxdesign,
+  "Backend Development": BackendDevelopmentImage,
+  "Frontend Development": FrontendDevelopmentImage,
+
+  // ... heey i will map other images to category names
+};
 
 const CategoriesCard = ({ item, index }) => {
   const { name, desc, bgColor, textColor } = item;
   const categoryImage = categoryImages[name];
 
   return (
-    <div className="py-[30px] px-3 lg:px-5">
-	<div className="mb-3">
-		<img src={categoryImage} alt={name} className="w-full h-auto" />
-  	</div>
+    <div className="py-[30px] px-3 lg:px-5 shadow-xl  hover:shadow-2xl  hover:scale-105  duration-300">
+      <div className="mb-3">
+        <img src={categoryImage} alt={name} className="w-full h-auto" />
+      </div>
       <h2 className="text-[26px] leading-9 text-headingColor font-[700]">
         {name}
       </h2>
@@ -44,11 +52,15 @@ const CategoriesCard = ({ item, index }) => {
             color: `${textColor}`,
             borderRadius: `6px 0 0 6px`,
           }}
+          
         >
+
           {index + 1}
         </span>
       </div>
     </div>
+
+    
   );
 };
 
