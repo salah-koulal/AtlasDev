@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
-import webDevelopmentImage from "../../assets/images/WebCategory.png";
-import GameDevelopmentImage from "../../assets/images/GameCategory.png";
-import mobileAppDevelopmentImage from "../../assets/images/AppCategory.png";
+// import webDevelopmentImage from "../../assets/images/WebCategory.png";
+// import GameDevelopmentImage from "../../assets/images/GameCategory.png";
+// import mobileAppDevelopmentImage from "../../assets/images/AppCategory.png";
 import BackendDevelopmentImage from "../../assets/images/BackendCategory.png";
 import FrontendDevelopmentImage from "../../assets/images/FrontendCategory.png";
 import uiuxdesign from "../../assets/images/uiuxCategory.png";
 
 const categoryImages = {
-  "Web Development": webDevelopmentImage,
-  "Game Development": GameDevelopmentImage,
-  "Mobile App Development": mobileAppDevelopmentImage,
+  // "Web Development": webDevelopmentImage,
+  // "Game Development": GameDevelopmentImage,
+  // "Mobile App Development": mobileAppDevelopmentImage,
   "UI/UX Design": uiuxdesign,
   "Backend Development": BackendDevelopmentImage,
   "Frontend Development": FrontendDevelopmentImage,
