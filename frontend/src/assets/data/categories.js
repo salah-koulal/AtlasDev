@@ -26,8 +26,8 @@ export const categories = [
   {
     name: "Backend Development",
     desc: "Develop robust server-side logic and infrastructure to power applications.",
-    bgColor: "rgba(1, 181, 197, .2)",
-    textColor: "#01B5C5",
+    bgColor: "rgba(254, 182, 13, .2)",
+    textColor: "#FEB60D",
   },
   {
     name: "Frontend Development",

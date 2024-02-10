@@ -8,7 +8,9 @@ import step01 from "../assets/images/select-animate.svg";
 import step02 from "../assets/images/webinar-animate.svg";
 import step03 from "../assets/images/notes-animate.svg";
 import About from "../components/About/About";
+import featureImg from "../assets/images/FeatureImage.gif"
 import CategoriesList from "../components/Categories/CategoriesList";
+import CourseList from "../components/Courses/CourseList";
 
 const Home = () => {
   return (
@@ -113,8 +115,7 @@ const Home = () => {
                 <Link
                   to="/categories"
                   className="w-[44px] h-[44px] rounded-full border border-solid border-[#1a1b1f]
-								mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
-                >
+								mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none">
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
@@ -197,6 +198,58 @@ const Home = () => {
         </div>
       </section>
       {/* ================== Category Section End ========================= */}
+      
+
+      {/*  Feature section  */}
+      <section>
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+            {/* ------ Feature Content -------*/}
+            <div className="xl:w-[670px]">
+              <h2 className="heading">
+              Note Anywhere, Anytime,<br />   Effortlessly.
+              </h2>
+
+              <ul className="pl-4">
+                <li className="text__para">
+                  1. Choose Your Course, select the course you want to delve into.
+                </li>
+                <li className="text__para">
+                  2. Effortless Note-Taking, seamlessly jot down key points.
+                </li>
+                <li className="text__para">
+                  3. Track Your Progress, monitor your learning journey by tracking your note-taking progress.
+                </li>
+              </ul>
+              <Link to='/'><button className="btn">Learn more</button></Link>
+            </div>
+            {/* Img For Feature */}
+            <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
+              <img src={featureImg} className="w-[600px] " alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Feature section End*/}
+
+
+      {/* Popular Courses */}
+      <section>
+        <div className="container">
+        <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Popular Courses</h2>
+            <p className="text__para text-center">
+              Discover coding at AtlasDev. Start your journey with web and App
+              development... Join Us!
+            </p>
+          </div>
+
+          <CourseList/>
+        </div>
+      </section>
+
+      {/* Popular Courses END */}
+
     </>
   );
 };
