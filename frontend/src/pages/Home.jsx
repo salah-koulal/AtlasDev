@@ -33,8 +33,7 @@ const Home = () => {
                   AtlasDev's meticulously crafted courses. Embark on a
                   transformative experience of exploration, discovery, and
                   skill-building as you delve into the world of programming
-                  excellence. Join us in shaping your coding expertise with
-                  precision and mastery.
+                  excellence.
                 </p>
 
                 <Link to="/categories">
