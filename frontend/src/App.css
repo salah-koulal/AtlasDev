@@ -13,6 +13,40 @@ body {
     margin-left: 70%;
 }
 
+.swiper-pagination-bullet{
+    width: 12px !important;
+    height: 12px !important;
+    border: 1px solid #181a1e !important;
+    background-color: #ffffff !important; 
+    opacity: 100% !important;
+}
+
+.swiper-pagination-bullet-active{
+    background: #9771FF !important;
+    border: none !important;
+}
+
+
+.swiper{
+    padding-bottom: 70px !important;   
+}
+
+.swiper-slide.swiper-slide-next{
+    background-image: url('./assets/images/blury.svg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(128, 0, 255, 0.3);
+}
+
+.swiper-slide.swiper-slide-next h4,
+.swiper-slide.swiper-slide-next p{
+    color: #2b2b2b !important;
+}
+
+.swiper-pagination{
+    top: 90% !important;
+}
 
 .sticky__header {
     width: 100%;

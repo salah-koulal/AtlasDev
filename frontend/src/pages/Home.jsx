@@ -9,11 +9,12 @@ import step01 from "../assets/images/select-animate.svg";
 import step02 from "../assets/images/webinar-animate.svg";
 import step03 from "../assets/images/notes-animate.svg";
 import About from "../components/About/About";
-import featureImg from "../assets/images/FeatureImage.gif"
-import faqImg from "../assets/images/FaqImg.png"
+import featureImg from "../assets/images/FeatureImage.gif";
+import faqImg from "../assets/images/FaqImg.png";
 import CategoriesList from "../components/Categories/CategoriesList";
 import CourseList from "../components/Courses/CourseList";
 import FaqList from "../components/Faq/FaqList";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -93,8 +94,9 @@ const Home = () => {
               Make your Coding space better
             </h2>
             <p className="text__para text-center">
-              Lorem ipsum dolor sit amet consectetur voluptates ut, Voluptatum
-              maxime quam
+             
+        
+          Elevate your coding space with AtlasDev for a better learning experience.
             </p>
           </div>
 
@@ -269,12 +271,28 @@ const Home = () => {
 
             <div className="w-full md:w-1/2">
               <h2 className="heading">Swift Answers to Community Inquiries.</h2>
-              <FaqList/>
+              <FaqList />
             </div>
           </div>
         </div>
       </section>
       {/*= = = = = = = = = = = = = = = = = = Faq Section End = = = = = = = = = = = = = = = = = = = = = */}
+
+      {/*= = = = = = = = = = = = = = = = = = Testimonial= = = = = = = = = = = = = = = = = = = = = */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              What Our Learners Have to Say!
+            </h2>
+            <p className="text__para text-center">
+              Discover Feedback from Our Enrollees!
+            </p>
+          </div>
+          <Testimonial />
+        </div>
+      </section>
+      {/*= = = = = = = = = = = = = = = = = = Testimonial End = = = = = = = = = = = = = = = = = = = = = */}
     </>
   );
 };
