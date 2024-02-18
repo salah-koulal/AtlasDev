@@ -44,7 +44,7 @@ const Login = () => {
               type="password"
               placeholder="Password "
               name="password "
-            //   value={formData.password}
+            // value={formData.password}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border-b border-solid border-[#b300ff61] focus:outline-none
                 focus:border-b-primaryColor text-[22px] leading-7 text-headingColor placeholder:text-textColor 

@@ -39,7 +39,7 @@ const quickLinks01 = [
 ];
 const quickLinks02 = [
   {
-    path: "/find-a-course",
+    path: "/courses",
     display: "Find a Course",
   },
   {
