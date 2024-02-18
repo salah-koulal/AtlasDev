@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
+import animationFaq from "../assets/images/Search-bar.json";
 import animationData from "../assets/images/Herosc.json";
 // import heroimg from "../assets/images/heroSec.gif";
 import { NavLink, Link } from "react-router-dom";
@@ -8,7 +9,12 @@ import step01 from "../assets/images/select-animate.svg";
 import step02 from "../assets/images/webinar-animate.svg";
 import step03 from "../assets/images/notes-animate.svg";
 import About from "../components/About/About";
+import featureImg from "../assets/images/FeatureImage.gif";
+import faqImg from "../assets/images/FaqImg.png";
 import CategoriesList from "../components/Categories/CategoriesList";
+import CourseList from "../components/Courses/CourseList";
+import FaqList from "../components/Faq/FaqList";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -24,9 +30,11 @@ const Home = () => {
                   Coding Mastery, Simplified with AtlasDev.
                 </h1>
                 <p className="text__para animate-fade-right animate-delay-[400ms]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                  harum assumenda laboriosam cupiditate! Adipisci itaque aperiam
-                  sapiente impedit soluta vel doloremque ab corporis
+                  Unlock the full potential of your coding journey with
+                  AtlasDev's meticulously crafted courses. Embark on a
+                  transformative experience of exploration, discovery, and
+                  skill-building as you delve into the world of programming
+                  excellence.
                 </p>
 
                 <Link to="/categories">
@@ -86,8 +94,9 @@ const Home = () => {
               Make your Coding space better
             </h2>
             <p className="text__para text-center">
-              Lorem ipsum dolor sit amet consectetur voluptates ut, Voluptatum
-              maxime quam
+             
+        
+          Elevate your coding space with AtlasDev for a better learning experience.
             </p>
           </div>
 
@@ -192,10 +201,103 @@ const Home = () => {
             </p>
           </div>
 
-         <CategoriesList />
+          <CategoriesList />
+          <div className=" flex justify-center items-center">
+          <Link to="/categories">
+                <button className="btn  hover:bg-irisBlueColor transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300">Explore more</button>
+              </Link>
+          </div>
         </div>
       </section>
       {/* ================== Category Section End ========================= */}
+
+      {/*  Feature section  */}
+      <section>
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+            {/* ================== Feature Content ====================*/}
+            <div className="xl:w-[670px]">
+              <h2 className="heading">
+                Note Anywhere, Anytime,
+                <br /> Effortlessly.
+              </h2>
+
+              <ul className="pl-4">
+                <li className="text__para">
+                  1. Choose Your Course, select the course you want to delve
+                  into.
+                </li>
+                <li className="text__para">
+                  2. Effortless Note-Taking, seamlessly jot down key points.
+                </li>
+                <li className="text__para">
+                  3. Track Your Progress, monitor your learning journey by
+                  tracking your note-taking progress.
+                </li>
+              </ul>
+              <Link to="/">
+                <button className="btn">Learn more</button>
+              </Link>
+            </div>
+            {/* Img For Feature */}
+            <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
+              <img src={featureImg} className="w-[600px] " alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ============= Feature section End ===================*/}
+
+      {/* ============= Popular Courses =============*/}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Popular Courses</h2>
+            <p className="text__para text-center">
+              Discover coding at AtlasDev. Start your journey with web and App
+              development... Join Us!
+            </p>
+          </div>
+
+          <CourseList />
+        </div>
+      </section>
+
+      {/* = = = = = = = = = = = = = = Popular Courses END = = = = = = = = = = = = = = = = = = = = */}
+
+      {/*= = = = = = = = = = = = = = = = = = Faq Section = = = = = = = = = = = = = = = = = = = = = */}
+      <section>
+        <div className="container">
+          <div className="flex justufiy-between gap-[50px] lg:gap-0">
+            <div className="w-1/2 hidden md:block">
+              <Lottie className="mr-[20%]" animationData={animationFaq} />
+              <img src={faqImg} alt="" />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <h2 className="heading">Swift Answers to Community Inquiries.</h2>
+              <FaqList />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*= = = = = = = = = = = = = = = = = = Faq Section End = = = = = = = = = = = = = = = = = = = = = */}
+
+      {/*= = = = = = = = = = = = = = = = = = Testimonial= = = = = = = = = = = = = = = = = = = = = */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              What Our Learners Have to Say!
+            </h2>
+            <p className="text__para text-center">
+              Discover Feedback from Our Enrollees!
+            </p>
+          </div>
+          <Testimonial />
+        </div>
+      </section>
+      {/*= = = = = = = = = = = = = = = = = = Testimonial End = = = = = = = = = = = = = = = = = = = = = */}
     </>
   );
 };
