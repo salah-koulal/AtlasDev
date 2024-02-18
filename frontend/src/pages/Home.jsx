@@ -202,6 +202,11 @@ const Home = () => {
           </div>
 
           <CategoriesList />
+          <div className=" flex justify-center items-center">
+          <Link to="/categories">
+                <button className="btn  hover:bg-irisBlueColor transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300">Explore more</button>
+              </Link>
+          </div>
         </div>
       </section>
       {/* ================== Category Section End ========================= */}
