@@ -83,6 +83,8 @@ These instructions will get you a copy of the project up and running on your loc
 
    ```
    mongoimport --db atlas_db --collection users --file atlasdb.json --jsonArray
+   mongoimport --db atlas_db --collection courses --file atlasdb.json --jsonArray
+   mongoimport --db atlas_db --collection favorites --file atlasdb.json --jsonArray
    ```
 
 8. Run the Flask application:
