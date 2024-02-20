@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """  """
-from base_model import BaseModel
+from bson import ObjectId
+from .base_model import BaseModel
 
 
 class Note(BaseModel):
@@ -22,3 +23,9 @@ class Note(BaseModel):
         self.note = note
         # Represent MongoDB collection 'notes' to the class
         self.collection = self.get_collection()
+
+    @classmethod
+    def read_by_user(cls, user_id):
+        """ Retrieve notes by a specific user """
+        collection = cls.get_collection()
+        return collection.find({'user_id': ObjectId(user_id)})
