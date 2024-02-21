@@ -9,6 +9,7 @@ from models.user_model import User
 from utils.database import get_db
 from bson.objectid import ObjectId
 from flask_bcrypt import Bcrypt
+from flask_cors import CORS
 
 app = Flask(__name__)
 # Initialize Flask-Bcrypt
@@ -35,6 +36,10 @@ def load_user(user_id):
                 user_doc['email'], user_doc.get('profile_image', None), is_hashed=True)
     user._id = user_doc['_id']
     return user
+
+
+# Initialize FLASK-CORS
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 app.debug = True
