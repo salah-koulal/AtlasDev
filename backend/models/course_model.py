@@ -27,13 +27,18 @@ class Course(BaseModel):
         if courses is not None:
             for course in courses:
                 courses_list.append({
-                    '_id': str(course['_id']),
+                    # '_id': str(course['_id']),
                     'course_title': course['course_title'],
                     'course_url': course['course_url'],
                     'description': course['description'],
-                    'category': course['category'],
+                    # 'category': course['category'],
                     'time': course['time']
                 })
-            return courses_list
+            return {category: courses_list}
         else:
             return []
+
+    def get_all_categories(self):
+        """ Retrieve all unique categories from the courses collection """
+        categories = self.collection.distinct('category')
+        return categories
