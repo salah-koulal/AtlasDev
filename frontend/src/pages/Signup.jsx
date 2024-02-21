@@ -1,31 +1,47 @@
-import React from "react";
+// React Signup Component (Signup.js)
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import signupIllus from "../../src/assets/images/sign-up-animate.svg";
-import iconAvatar from "../../src/assets/images/avatarLearner03.png"
+// import iconAvatar from "../../src/assets/images/avatarLearner03.png"
 
 const Signup = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    // photo:"",
+    password: "",
+    // gender: "",
+  });
 
-    const [selectedFile, setSelectFile] = useState(null)
-    const [previewUrl, setPreviewUrl] = useState(" ")
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        password: "",
-        photo: "",
-        gender:''
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://127.0.0.1:5000/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    
-      const handleInputChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-      };
+
+      const data = await response.json();
+      console.log(data); // Handle the response data accordingly (e.g., show a success message to the user)
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <section className="px-5 xl:px-0">
       <div className="max-w-[1300px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* ------------------- Sign Up illustration ----------------*/}
-          <div className="hidden lg:block bg-[#7e57ffc0] rounded-l-lg">
+          <div className="hidden lg:block bg-primaryColor rounded-l-lg">
             <figure className="rounded-l-lg">
               <img src={signupIllus} alt="" className="w-full rounded-l-lg" />
             </figure>
@@ -37,7 +53,7 @@ const Signup = () => {
               Create Your <span className="text-primaryColor">Account</span>
             </h3>
 
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <div className="mb-5">
                 <input
                   type="text"
@@ -80,7 +96,7 @@ const Signup = () => {
                 />
               </div>
 
-              <div className="mb-5 flex items-center justify-between">
+              {/* <div className="mb-5 flex items-center justify-between">
                 <label className="text-headingColor font-bold text-[16px] leading-7">
                   Gender:
                   <select
@@ -96,9 +112,8 @@ const Signup = () => {
                     <option value="other">Other</option>
                   </select>
                 </label>
-              </div>
-
-              <div className="mb-5 flex items-center gap-3">
+              </div> */}
+              {/* <div className="mb-5 flex items-center gap-3">
                 <figure
                   className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor
                     flex items-center justify-center "
@@ -126,21 +141,21 @@ const Signup = () => {
                     Upload Photo
                   </label>
                 </div>
+              </div> */}
+              <div className="mt-7">
+                <button
+                  type="submit"
+                  className="w-full bg-primaryColor text-white text-[20px] leading-[30px]
+                    rounded-lg px-4 py-3"
+                >
+                  Sign Up
+                </button>
               </div>
 
-              <div className="mt-7">
-            <button
-              type="submit"
-              className="w-full bg-primaryColor text-white text-[20px] leading-[30px]
-                rounded-lg px-4 py-3">
-              Sign Up
-            </button>
-          </div>
-
-          <p className="mt-5 text-textColor text-center ">
-            Already have an account? 
-            <Link to={'/login'} className="text-primaryColor font-medium ml-1">Register</Link>
-          </p>
+              <p className="mt-5 text-textColor text-center ">
+                Already have an account? 
+                <Link to={'/login'} className="text-primaryColor font-medium ml-1">Login</Link>
+              </p>
             </form>
           </div>
         </div>
