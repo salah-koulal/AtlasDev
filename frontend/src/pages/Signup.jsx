@@ -1,4 +1,3 @@
-// React Signup Component (Signup.js)
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import signupIllus from "../../src/assets/images/sign-up-animate.svg";
