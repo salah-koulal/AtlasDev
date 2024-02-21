@@ -4,9 +4,9 @@ AtlasDev is a web application that allows users to sign up, log in, and manage t
 
 ## Team Members
 
-- Meriem Ben Ayad: Back-end Developer
-- Salah Koulal: Front-end Developer
-- Mouad Nait: DevOps
+- [Meriem Ben Ayad](https://www.linkedin.com/in/meriem-benayad/): Back-end Developer
+- [Salah Koulal](https://www.linkedin.com/in/salah-koulal-ab2523264/): Front-end Developer
+- [Mouad Nait](https://www.linkedin.com/in/mouad-nait-si-017b73200/): DevOps
 
 ## Features
 
@@ -22,23 +22,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Python 3.x
-- MongoDB
-- Flask
-- Flask-Login
-- Flask-Bcrypt
-- Flask-WTF
-- Flask-PyMongo
-- PyMongo
-- Blinker
-- Click
-- dnspython
-- itsdangerous
-- Jinja2
-- MarkupSafe
-- passlib
-- Werkzeug
-- wheel
+- `Python 3.x`
+- `MongoDB`
+- `Flask`
+- `Flask-Login`
+- `Flask-Bcrypt`
+- `Flask-WTF`
+- `Flask-PyMongo`
+- `PyMongo`
+- `Blinker`
+- `Click`
+- `dnspython`
+- `itsdangerous`
+- `Jinja2`
+- `MarkupSafe`
+- `passlib`
+- `Werkzeug`
+- `wheel`
 
 ### Installation
 
