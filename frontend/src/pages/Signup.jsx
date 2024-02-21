@@ -6,7 +6,7 @@ import signupIllus from "../../src/assets/images/sign-up-animate.svg";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     email: "",
     // photo:"",
     password: "",
@@ -57,15 +57,16 @@ const Signup = () => {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="Full Name"
-                  name="name"
-                  value={formData.name}
+                  placeholder="Username"
+                  name="username"
+                  value={formData.username}
                   onChange={handleInputChange}
                   className="w-full pr-4 px-4 py-3 border-b border-solid border-[#b300ff61] focus:outline-none
                 focus:border-b-primaryColor text-[22px] leading-7 text-headingColor placeholder:text-textColor 
                 rounded-md cursor-pointer"
                   required
                 />
+                
               </div>
 
               <div className="mb-5">
