@@ -20,7 +20,11 @@ AtlasDev is a web application that allows users to sign up, log in, and manage t
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+### Back-end Instructions:
+
+To test back-end locally, you should follow instruction below:
+
+#### Prerequisites
 
 - `Python 3.x`
 - `MongoDB`
@@ -40,7 +44,7 @@ These instructions will get you a copy of the project up and running on your loc
 - `Werkzeug`
 - `wheel`
 
-### Installation
+#### Installation
 
 1. Clone the repository:
 
@@ -81,10 +85,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 7. Import the MongoDB database from the atlasdb.json file:
 
-   ```
+   ```sh
    mongoimport --db atlas_db --collection users --file atlasdb.json --jsonArray
    mongoimport --db atlas_db --collection courses --file atlasdb.json --jsonArray
    mongoimport --db atlas_db --collection favorites --file atlasdb.json --jsonArray
+   mongoimport --db atlas_db --collection notes --file atlasdb.json --jsonArray
    ```
 
 8. Run the Flask application:
@@ -92,7 +97,7 @@ These instructions will get you a copy of the project up and running on your loc
    flask run
    ```
 
-### Running the Application
+#### Running the Application
 
 To run the application, use the following command:
 
@@ -102,7 +107,7 @@ FLASK_APP=app.py FLASK_ENV=atlas_env flask run
 
 This will start the Flask development server. You can then access the application in your web browser at `http://localhost:5000`.
 
-### Testing with Postman
+#### Testing with Postman
 
 To test the application using `Postman`, you can send HTTP requests to the various endpoints provided by the application. Here are some examples:
 
@@ -117,6 +122,10 @@ To test the application using `Postman`, you can send HTTP requests to the vario
 - **Get Courses by Category**: `GET /courses/<category>`
 
 Make sure to replace `<user_id>` and `<course_id>` with actual user and course IDs.
+
+### Front-end Instructions:
+
+To test front-end locally: ()
 
 ## Contributing
 
