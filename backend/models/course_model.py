@@ -38,6 +38,27 @@ class Course(BaseModel):
         else:
             return []
 
+    def get_cources_search(self, name):
+        """ Retreive courses based on category """
+        # re_name = re.compile('^{}$'.format(name), re.IGNORECASE)
+        courses = self.collection.find(
+            {'course_title': {"$regex": "^" + name + ".*", "$options": "i"}})
+        courses_list = []
+        if courses is not None:
+            for course in courses:
+                print(course)
+                courses_list.append({
+                    # '_id': str(course['_id']),
+                    'course_title': course['course_title'],
+                    'course_url': course['course_url'],
+                    'description': course['description'],
+                    # 'category': course['category'],
+                    'time': course['time']
+                })
+            return courses_list
+        else:
+            return []
+
     def get_all_categories(self):
         """ Retrieve all unique categories from the courses collection """
         categories = self.collection.distinct('category')
