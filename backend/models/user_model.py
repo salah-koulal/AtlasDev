@@ -10,7 +10,7 @@ class User(BaseModel, UserMixin):
     """ User model inherits from BaseModel """
     """ collection = BaseModel.get_collection() """
 
-    def __init__(self, username, password, email, is_hashed=False):
+    def __init__(self, username, password, email, profile_image=None, is_hashed=False):
         """ Initialize the User object with a username, hashed password, and email """
         super().__init__()
         self.username = username
@@ -19,7 +19,7 @@ class User(BaseModel, UserMixin):
         else:
             self.set_password(password)
         self.email = email
-        # self.profile_image = profile_image
+        self.profile_image = profile_image
         # Represent MongoDB collection 'users' to the class
         self.collection = self.get_collection()
         #  is_active attribute, which is expected by Flask-Login
@@ -42,7 +42,7 @@ class User(BaseModel, UserMixin):
             'username': self.username,
             'password': self.password,
             'email': self.email,
-            # 'profile_image': self.profile_image
+            'profile_image': self.profile_image
         }
         return data
 

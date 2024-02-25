@@ -8,7 +8,7 @@ import re
 class Course(BaseModel):
     """  """
 
-    def __init__(self, course_title=None, course_url=None, description=None, category=None, time=None):
+    def __init__(self, course_title, course_url, description=None, category=None, time=None):
         """  """
         super().__init__()
         self.course_title = course_title
