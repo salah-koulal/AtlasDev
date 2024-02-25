@@ -1,0 +1,1 @@
+{"_id":{"$oid":"65b98828d76eda0d71b209d4"},"user":"{\"$ref\":\"users\",\"$id\":\"65c94c80ec708af258089dfb\",\"$db\":\"atlas_db\"}","course":{"$ref":"courses","$id":{"$oid":"65b98704d76eda0d71b209d1"},"$db":"atlas_db"},"note":"note content"}
