@@ -1,0 +1,5 @@
+{"_id":{"$oid":"65ceafb9ddad8f032afdff41"},"users":{"$ref":"users","$id":{"$oid":"65cbb50bd6b96328c6267002"},"$db":"atlas_db"},"courses":{"$ref":"courses","$id":{"$oid":"65cd570b564349766970a7bc"},"$db":"atlas_db"}}
+{"_id":{"$oid":"65ceafb9ddad8f032afdff43"},"users":{"$ref":"users","$id":{"$oid":"65c782a3afb09e423fad816c"},"$db":"atlas_db"},"courses":{"$ref":"courses","$id":{"$oid":"65cd570b564349766970a7b4"},"$db":"atlas_db"}}
+{"_id":{"$oid":"65ceafb9ddad8f032afdff44"},"users":{"$ref":"users","$id":{"$oid":"65c782a3afb09e423fad816c"},"$db":"atlas_db"},"courses":{"$ref":"courses","$id":{"$oid":"65cd570b564349766970a7b9"},"$db":"atlas_db"}}
+{"_id":{"$oid":"65d53d63d0d61e3c8df5a4d1"},"users":{"$ref":"users","$id":{"$oid":"65cbb50bd6b96328c6267002"},"$db":"atlas_db"},"courses":{"$ref":"courses","$id":{"$oid":"65cd570b564349766970a7b4"},"$db":"atlas_db"}}
+{"_id":{"$oid":"65d544275c4465a8f44cc8fe"},"users":{"$ref":"users","$id":{"$oid":"65cbb50bd6b96328c6267002"},"$db":"atlas_db"},"courses":{"$ref":"courses","$id":{"$oid":"65cd570b564349766970a7b7"},"$db":"atlas_db"}}
