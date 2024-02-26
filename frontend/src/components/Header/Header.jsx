@@ -10,7 +10,7 @@ const navLinks = [
     },
     {
     path:'/courses',
-    display:'Popular Courses'
+    display:'Courses'
     },
     {
     path:'/categories',

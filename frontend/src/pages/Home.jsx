@@ -252,7 +252,7 @@ const Home = () => {
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
-            <h2 className="heading text-center">Popular Courses</h2>
+            <h2 className="heading text-center">Our Courses</h2>
             <p className="text__para text-center">
               Discover coding at AtlasDev. Start your journey with web and App
               development... Join Us!

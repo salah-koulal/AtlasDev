@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link , useNavigate} from "react-router-dom";
 import signupIllus from "../../src/assets/images/sign-up-animate.svg";
 // import iconAvatar from "../../src/assets/images/avatarLearner03.png"
-import RotateLoader from 'react-spinners/HashLoader'
+import BounceLoader from 'react-spinners/BounceLoader'
 import {toast} from "react-toastify"
 
 const Signup = () => {
@@ -129,7 +129,7 @@ const Signup = () => {
                   className="w-full bg-primaryColor text-white text-[20px] leading-[30px]
                   rounded-lg px-4 py-3"
                 >
-                  {loading ? <RotateLoader color="#ffffff" /> : 'Sign Up'}
+                  {loading ? <BounceLoader size={30} color="#ffffff" /> : 'Sign Up'}
                 </button>
               </div>
 
