@@ -39,7 +39,7 @@ def load_user(user_id):
 
 
 # Initialize FLASK-CORS
-CORS(app, resources={r"/*": {"origins": "*"}})
+# CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 app.debug = True
