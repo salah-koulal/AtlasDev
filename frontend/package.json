@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "vercel-build" : "react-scripts build"
+    "vercel-build": "react-scripts build",
+    "start": "react-scripts start"
 
   },
   "dependencies": {
