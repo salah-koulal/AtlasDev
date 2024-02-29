@@ -5,7 +5,7 @@ FROM python:latest as backend
 WORKDIR /backend
 
 # Copy the requirements file into the container
-COPY /backend/requirements.txt .
+COPY requirements.txt .
 
 # Install Flask and other dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -18,24 +18,3 @@ EXPOSE 5000
 
 # Run the Flask application
 CMD ["flask", "run", "--host=0.0.0.0"]
-
-# Use Node.js image as the base image for frontend
-FROM node:latest as frontend
-
-# Set the working directory for the frontend
-WORKDIR /frontend
-
-# Copy frontend files to container
-COPY frontend/package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy all frontend files to container
-COPY frontend/ .
-
-# Expose the port that Vite runs on
-EXPOSE 3000
-
-# Run Vite dev server
-CMD ["npm", "run", "dev"]
