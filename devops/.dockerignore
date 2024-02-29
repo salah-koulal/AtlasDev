@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+build
+*.pyc
+.dockerfile
+Dockerfile
+Dockerfile.prod
+Jenkinsfile
+deploymentservice.yml
