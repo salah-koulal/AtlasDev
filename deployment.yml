@@ -1,0 +1,95 @@
+# etcd deployment
+apiVersion: apps/v1                   # Specifies the API version for Kubernetes objects
+kind: Deployment                      # Specifies the kind of Kubernetes object being created (Deployment)
+metadata:                             # Metadata for the Deployment object
+  name: etcd-deployment               # Name of the Deployment
+spec:                                 # Specification for the Deployment
+  replicas: 3                         # Number of desired replicas (instances) of the etcd pod
+  selector:                           # Specifies how the Deployment finds which Pods to manage
+    matchLabels:                      # Matches labels to select which Pods the Deployment manages
+      app: etcd                       # Selects Pods with the label "app: etcd"
+  template:                           # Defines the template for the Pods created by the Deployment
+    metadata:                         # Metadata for the Pod template
+      labels:                         # Labels for the Pods created by the template
+        app: etcd                     # Label for Pods created by the template
+    spec:                             # Specification for the Pods created by the template
+      containers:                     # List of containers to run in the Pod
+      - name: etcd                    # Name of the container
+        image: mouad/atlasdev         # Specifies the Docker image for the container
+        command: ["/usr/local/bin/etcd"]   # Command to run when the container starts
+        args:                          # Arguments to pass to the command
+          - "--name"                   # Name of the etcd node
+          - "etcd-$(POD_ORDINAL)"      # Pod ordinal is used to uniquely identify each Pod instance
+          - "--initial-advertise-peer-urls"   # URL to advertise for peers to connect to
+          - "http://$(POD_IP):2380"    # IP address and port for peers to connect to
+          - "--listen-peer-urls"       # URL to listen for peer connections
+          - "http://0.0.0.0:2380"      # IP address and port for peer connections
+          - "--advertise-client-urls"  # URL to advertise for clients to connect to
+          - "http://$(POD_IP):2379"    # IP address and port for clients to connect to
+          - "--listen-client-urls"     # URL to listen for client connections
+          - "http://0.0.0.0:2379"      # IP address and port for client connections
+          - "--initial-cluster"        # Initial cluster configuration for bootstrapping
+          - "etcd-0=http://<etcd-0-ip>:2380,etcd-1=http://<etcd-1-ip>:2380,etcd-2=http://<etcd-2-ip>:2380"
+                                        # Addresses of initial cluster members
+          - "--initial-cluster-state"  # Initial cluster state
+          - "new"                      # State of the initial cluster
+          - "--data-dir"               # Directory for storing data
+          - "/var/lib/etcd"            # Path to the data directory
+          - "--logger=zap"             # Logger configuration for etcd
+        ports:                         # Ports to expose on the container
+        - containerPort: 2379          # Port used for client communication
+          name: client                 # Name for the client port
+        - containerPort: 2380          # Port used for peer-to-peer communication
+          name: peer                   # Name for the peer port
+
+# Kubernetes master nodes
+apiVersion: apps/v1                   # Specifies the API version for Kubernetes objects
+kind: Deployment                      # Specifies the kind of Kubernetes object being created (Deployment)
+metadata:                             # Metadata for the Deployment object
+  name: k8s-master-deployment         # Name of the Deployment
+spec:                                 # Specification for the Deployment
+  replicas: 3                         # Number of desired replicas (instances) of the master node
+  selector:                           # Specifies how the Deployment finds which Pods to manage
+    matchLabels:                      # Matches labels to select which Pods the Deployment manages
+      app: k8s-master                 # Selects Pods with the label "app: k8s-master"
+  template:                           # Defines the template for the Pods created by the Deployment
+    metadata:                         # Metadata for the Pod template
+      labels:                         # Labels for the Pods created by the template
+        app: k8s-master               # Label for Pods created by the template
+    spec:                             # Specification for the Pods created by the template
+      containers:                     # List of containers to run in the Pod
+      - name: kube-apiserver          # Name of the container
+        image: mouadnait/atlasdev     # Specifies the Docker image for the container
+        ports:                        # Ports to expose on the container
+        - containerPort: 6443         # Port used by the API server
+          protocol: TCP               # Protocol used for the port
+      - name: kube-controller-manager # Name of the container
+        image: mouadnait/atlasdev     # Specifies the Docker image for the container
+      - name: kube-scheduler          # Name of the container
+        image: mouadnait/atlasdev     # Specifies the Docker image for the container
+      - name: kube-proxy              # Name of the container
+        image: mouadnait/atlasdev     # Specifies the Docker image for the container
+
+# Kubernetes worker nodes
+apiVersion: apps/v1                   # Specifies the API version for Kubernetes objects
+kind: Deployment                      # Specifies the kind of Kubernetes object being created (Deployment)
+metadata:                             # Metadata for the Deployment object
+  name: k8s-worker-deployment         # Name of the Deployment
+spec:                                 # Specification for the Deployment
+  replicas: 3                         # Number of desired replicas (instances) of the worker node
+  selector:                           # Specifies how the Deployment finds which Pods to manage
+    matchLabels:                      # Matches labels to select which Pods the Deployment manages
+      app: k8s-worker                 # Selects Pods with the label "app: k8s-worker"
+  template:                           # Defines the template for the Pods created by the Deployment
+    metadata:                         # Metadata for the Pod template
+      labels:                         # Labels for the Pods created by the template
+        app: k8s-worker               # Label for Pods created by the template
+    spec:                             # Specification for the Pods created by the template
+      containers:                     # List of containers to run in the Pod
+      - name: kubelet                 # Name of the container
+        image: mouadnait/atlasdev     # Specifies the Docker image for the container
+        ports:                        # Ports to expose on the container
+        - containerPort: 10250        # Port used by the Kubelet
+          protocol: TCP               # Protocol used for the port
+      - name: kube-proxy              # Name of the container
+        image: mouadnait/atlasdev     # Specifies the Docker image for the container
