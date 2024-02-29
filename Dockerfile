@@ -5,7 +5,7 @@ FROM python:latest as backend
 WORKDIR /backend
 
 # Copy the requirements file into the container
-COPY requirements.txt .
+COPY /backend/requirements.txt .
 
 # Install Flask and other dependencies
 RUN pip install --no-cache-dir -r requirements.txt
