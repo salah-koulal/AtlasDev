@@ -1,7 +1,7 @@
 # AtlasDev e-Learning web app
 
 AtlasDev is a web application that allows users to sign up, log in, and manage their favorite courses. The application is built using Flask, a lightweight web framework for Python, and MongoDB for data storage.
-<img src="./Minimalist Neutral AtlasDev.png" >
+<img src="./Minimalist Neutral AtlasDev.png" width="800">
 ## Team Members
 
 - [Meriem Ben Ayad](https://www.linkedin.com/in/meriem-benayad/): Back-end Developer
